@@ -10,23 +10,23 @@ public class MaxVowelsSubarrOfK {
         int max =0;
         int vowels =0;
 
-      
         while(j<s.length()){
-            if(isVowels(c[j])) {
+            if(isVowels(c[j])){
                 vowels++;
             }
 
-            if(j - i + 1 == k){
-                max = Math.max(max ,vowels);
+            while(j-i+1 == k){
+                max = Math.max(max , vowels);
                 if(isVowels(c[i])){
                     vowels--;
-                } 
+                }
                 i++;
-
+                
             }
             j++;
         }
         System.out.println(max);
+      
     }
 
     private static boolean isVowels(char ch) {
